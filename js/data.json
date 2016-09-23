@@ -3,21 +3,25 @@
 
 var SliderAccess = [{
     "image":"images/1.jpg",
+	"imageSM":"images/sm-1.jpg",
     "imageHeight":"250px",
 	"imageWidth":"300px",
 	"imageHref":"http://google1.com/",
 },{
     "image":"images/2.jpg",
+	"imageSM":"images/sm-2.jpg",
     "imageHeight":"250px",
 	"imageWidth":"300px",
 	"imageHref":"http://google2.com/",
 },{
     "image":"images/3.jpg",
+	"imageSM":"images/sm-3.jpg",
     "imageHeight":"250px",
 	"imageWidth":"300px",
 	"imageHref":"http://google3.com/",
 },{
     "image":"images/4.jpg",
+	"imageSM":"images/sm-4.jpg",
     "imageHeight":"250px",
 	"imageWidth":"300px",
 	"imageHref":"http://google4.com/",
