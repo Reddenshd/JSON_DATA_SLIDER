@@ -7,6 +7,7 @@ var counterSlide = 1;
 var TotalObject;
 var index;
 var SliderContainerATT;
+var total;
 
 function sliderActive() {
 	for(i = 0; i < SliderAccess.length; i++){
@@ -15,17 +16,30 @@ function sliderActive() {
 			SliderImage = SliderAccess[0].image;	
 			SliderHref = SliderAccess[0].imageHref;	
 			
-		if(i > 1) {$("#leftArrow").css("display", "block"); $("#rightArrow").css("display", "block");}
-		else{$("#leftArrow").css("display", "none"); $("#rightArrow").css("display", "none");	}								 
+		if(i > 1) {
+			$(".leftArrow, .rightArrow").css("display", "block");
+		}
+		else{
+			$(".leftArrow, .rightArrow").css("display", "none");
+		}								 
 	}
+	
+	document.getElementById('SliderContainer').setAttribute('total', TotalObject);
+	
 	        slider = document.createElement("img");
 			slider.id = "Slider_Main";
 			slider.src = SliderImage;
 			slider.setAttribute('href', SliderHref);			
 			$("#SliderContainer").append(slider);
 	
-	$("#leftArrow").click(function(){leftArrow();});
-	$("#rightArrow").click(function(){rightArrow();});
+	$(".leftArrow").click(function(){leftArrow();});
+	$(".rightArrow").click(function(){rightArrow();});
+	
+	$(".leftArrow").mouseenter(function(){$(".leftArrow").animate({opacity: "1.0", height: "100px", width: "100px", top: "150px",  left: "9%"});});
+	$(".leftArrow").mouseleave(function(){$(".leftArrow").animate({opacity: "0.5", height: "50px", width: "50px", top: "175px", left: "10%"});});
+	$(".rightArrow").mouseenter(function(){$(".rightArrow").animate({opacity: "1.0", height: "100px", width: "100px", top: "150px", right: "9%"});});
+	$(".rightArrow").mouseleave(function(){$(".rightArrow").animate({opacity: "0.5", height: "50px", width: "50px", top: "175px", right: "10%"});});
+
 	
 	function leftArrow() {
 		counterSlide--; 

@@ -19,15 +19,20 @@
 	border:#000000 1px solid;
 }
 
-#leftArrow, #rightArrow {
-	height:100px;
-	width:100px;
-	border:#000000 1px solid;
+.leftArrow, .rightArrow {
+	height:50px;
+	width:50px;
+	border:#CCCCCC 2px solid;
 	cursor:pointer;
 	display:none;
 	position:absolute;
-	top:150px;
+	top:175px;
 	z-index:9999999;
+	border-radius:125px;
+	box-shadow:#cccccc 4px 3px 4px;
+	opacity:0.5;
 }
 
-#leftArrow { left:10%;}  #rightArrow { right:10%;}
+
+.leftArrow { left:10%;}  
+.rightArrow { right:10%;}
