@@ -31,7 +31,6 @@
     height: 300px;
     width: 600px;
     top: -226px;
-    border-bottom: #cccccc 1px solid;
     z-index: 9 !important;
     cursor: pointer;
 }
@@ -61,3 +60,4 @@
 
 .leftArrow { left:10%;}  
 .rightArrow { right:10%;}
+
