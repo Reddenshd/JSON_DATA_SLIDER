@@ -20,7 +20,23 @@
 	top:75px;
 	border-bottom: #cccccc 1px solid;
     box-shadow: #cccccc 4px 3px 20px;
+	border-radius:20px;
 }
+
+#SliderHREF {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 300px;
+    width: 600px;
+    top: -226px;
+    border-bottom: #cccccc 1px solid;
+    z-index: 9 !important;
+    cursor: pointer;
+}
+
+
 
 .leftArrow, .rightArrow {
     height: 40px;
@@ -31,7 +47,7 @@
 	display:none;
 	position:absolute;
 	top:175px;
-	z-index:9999999;
+	z-index:99999999999999999999999999999999999 !important;
 	border-radius:125px;
 	box-shadow:#cccccc 4px 3px 4px;
 	opacity:0.5;
