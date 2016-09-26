@@ -1,5 +1,6 @@
 // JavaScript Document
 
+
 var SliderImage, SliderImageSM, SliderHref, slider, TotalObject, index, SliderContainerATT;
 var total, WidthD, SliderHREFset, folderLoc = 'images/', smlImageIndex = 'sm-', counterSlide = 1;
 var dftM_H , dftM_W, dftD_H, dftD_W;
@@ -66,5 +67,24 @@ function setSlide() {
    document.getElementById('SliderHREF').style.top = '-226px';
    SliderContainerATT = document.getElementById("SliderContainer").setAttribute("slide", counterSlide);
   }
+  
+  
+  AnimationActiveBTN();
+  
+  
 }
 window.onresize = function(event) {setSlide();};
+
+
+var myAnimationBTN;
+
+function AnimationActiveBTN() {
+    myAnimationBTN = setInterval(myAnimationActive, 1500);
+}
+
+function myAnimationActive() {
+            $(".leftArrow").animate({opacity: "1.0", height: "60px", width: "90px", top: "150px",  left: "9%", paddingTop: "30px"});
+	  		$(".leftArrow").animate({opacity: "0.5", height: "40px", width: "50px", top: "175px", left: "10%", paddingTop: "10px"});
+	 		$(".rightArrow").animate({opacity: "1.0", height: "60px", width: "90px", top: "150px", right: "9%", paddingTop: "30px"});
+	  		$(".rightArrow").animate({opacity: "0.5", height: "40px", width: "50px", top: "175px", right: "10%", paddingTop: "10px"});
+}
