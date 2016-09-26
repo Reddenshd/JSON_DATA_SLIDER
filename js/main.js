@@ -51,7 +51,7 @@ function setSlide() {
 	  document.getElementById("Slider_Main").src = folderLoc + smlImageIndex + counterSlide +'.jpg'; 
 	  var imageHeightSet =  $("#Slider_Main").height();
 	  var imageWidthSet =  $("#Slider_Main").width();
-	  if(imageHeightSet == 0 && imageWidthSet == 0) { imageHeightSet = dftM_H;imageWidthSet = dftM_W;} 
+	  if(imageHeightSet == 0 && imageWidthSet == 0) { imageHeightSet = dftM_H; imageWidthSet = dftM_W;} 
 	  document.getElementById('SliderHREF').style.width = imageWidthSet + 'px';
 	  document.getElementById('SliderHREF').style.height = imageHeightSet + 'px';
 	  document.getElementById('SliderHREF').style.top = '-177px';
@@ -61,7 +61,7 @@ function setSlide() {
   
    var imageHeightSet =  $("#Slider_Main").height();
    var imageWidthSet =  $("#Slider_Main").width();
-   if(imageHeightSet == 0 && imageWidthSet == 0) { imageHeightSet = dftD_H;imageWidthSet = dftD_W;}
+   if(imageHeightSet == 0 && imageWidthSet == 0) { imageHeightSet = dftD_H; imageWidthSet = dftD_W;}
 
    document.getElementById("Slider_Main").src = folderLoc + counterSlide +'.jpg'; 
    document.getElementById('SliderHREF').style.width = imageWidthSet + 'px';
