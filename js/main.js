@@ -2,6 +2,7 @@
 
 var SliderImage, SliderImageSM, SliderHref, slider, TotalObject, index, SliderContainerATT;
 var total, WidthD, SliderHREFset, folderLoc = 'images/', smlImageIndex = 'sm-', counterSlide = 1;
+var dftM_H , dftM_W, dftD_H, dftD_W;
 
 function sliderActive() {
 	for(i = 0; i < SliderAccess.length; i++){
@@ -10,6 +11,10 @@ function sliderActive() {
 		SliderImage = SliderAccess[0].image;	
 		SliderImageSM = SliderAccess[0].SliderImageSM;	
 		SliderHref = SliderAccess[0].imageHref;	
+		dftM_H = SliderAccess[0].dftM_H;	
+        dftM_W = SliderAccess[0].dftM_W;	
+        dftD_H = SliderAccess[0].dftD_H;	
+        dftD_H = SliderAccess[0].dftD_H;	
 		if(i > 1) {$(".leftArrow, .rightArrow").css("display", "block");}
 		else{$(".leftArrow, .rightArrow").css("display", "none");}							 
 	}
@@ -44,15 +49,23 @@ function setSlide() {
   WidthD = document.body.clientWidth;
   if(WidthD <= 768){
 	  document.getElementById("Slider_Main").src = folderLoc + smlImageIndex + counterSlide +'.jpg'; 
-	  document.getElementById('SliderHREF').style.width = '300px';
-	  document.getElementById('SliderHREF').style.height = '250px';
+	  var imageHeightSet =  $("#Slider_Main").height();
+	  var imageWidthSet =  $("#Slider_Main").width();
+	  if(imageHeightSet == 0 && imageWidthSet == 0) { imageHeightSet = dftM_H;imageWidthSet = dftM_W;} 
+	  document.getElementById('SliderHREF').style.width = imageWidthSet + 'px';
+	  document.getElementById('SliderHREF').style.height = imageHeightSet + 'px';
 	  document.getElementById('SliderHREF').style.top = '-177px';
 	  SliderContainerATT = document.getElementById("SliderContainer").setAttribute("slide", counterSlide);
   }
   else{ 
+  
+   var imageHeightSet =  $("#Slider_Main").height();
+   var imageWidthSet =  $("#Slider_Main").width();
+   if(imageHeightSet == 0 && imageWidthSet == 0) { imageHeightSet = dftD_H;imageWidthSet = dftD_W;}
+
    document.getElementById("Slider_Main").src = folderLoc + counterSlide +'.jpg'; 
-   document.getElementById('SliderHREF').style.width = '600px';
-   document.getElementById('SliderHREF').style.height = '300px';
+   document.getElementById('SliderHREF').style.width = imageWidthSet + 'px';
+   document.getElementById('SliderHREF').style.height = imageHeightSet + 'px';
    document.getElementById('SliderHREF').style.top = '-226px';
    SliderContainerATT = document.getElementById("SliderContainer").setAttribute("slide", counterSlide);
   }
