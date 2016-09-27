@@ -79,7 +79,7 @@ window.onresize = function(event) {setSlide();};
 var myAnimationBTN;
 
 function AnimationActiveBTN() {
-    myAnimationBTN = setInterval(myAnimationActive, 1500);
+    myAnimationBTN = setInterval(myAnimationActive, 3000);
 }
 
 function myAnimationActive() {
